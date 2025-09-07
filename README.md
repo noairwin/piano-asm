@@ -20,15 +20,11 @@ It runs inside **DOSBox** using **graphics mode 13h** and the **PC speaker** to 
    ```bash
    tasm piano2.asm
    tlink piano2.obj
-Run the program:
 
-bash
-Copy code
-piano2.exe
 🎶 Press A, S, D, F, G, H to play notes.
 Press ESC to quit.
 
-🛠 Tech Stack
+##🛠 Tech Stack
 Language: x86 Assembly (TASM)
 
 Graphics Mode: Mode 13h (320x200, 256 colors)
@@ -39,7 +35,7 @@ Tools: Turbo Assembler (TASM), Turbo Linker (TLINK)
 
 Emulation: DOSBox
 
-🎨 Features
+## 🎨 Features
 Draws 6 white piano keys on screen.
 
 Each key changes color when pressed:
@@ -60,7 +56,7 @@ Plays the corresponding note frequency on the PC speaker.
 
 Pressing ESC exits and shows a goodbye message.
 
-📸 Screenshots
+## 📸 Screenshots
 
 <img width="752" height="540" alt="Screenshot 2025-09-07 at 20 41 49" src="https://github.com/user-attachments/assets/3379c918-7020-44f5-8ba2-02d36bed0145" />
 
