@@ -1,15 +1,48 @@
-🎹 Piano in Assembly (8086 DOSBox)
+# 🎹 Piano in Assembly (8086 DOSBox)
 
-This is a simple piano program written in x86 Assembly (8086), built to run in DOSBox.
-It was one of my first graphics & sound projects, made in 2024 as a fun way to combine keyboard input, VGA graphics mode, and PC speaker sound.
+A simple piano program written in **x86 Assembly (8086)**.  
+It runs inside **DOSBox** using **graphics mode 13h** and the **PC speaker** to simulate a mini piano.
 
-🚀 Features
+---
 
-Runs in graphics mode 13h (320x200, 256 colors).
+## ▶️ How to Run
 
-Draws 6 white keys on screen (A–H keys on keyboard).
+1. Install [DOSBox](https://www.dosbox.com/).
 
-Each key changes color when pressed and plays a note:
+2. Clone or download this repository.
+
+3. Make sure the following files are present in the project folder:
+   - `TASM.EXE`
+   - `TLINK.EXE`
+   - `PIANO2.ASM`
+
+4. In DOSBox, navigate to the project folder and assemble/link:
+   ```bash
+   tasm piano2.asm
+   tlink piano2.obj
+Run the program:
+
+bash
+Copy code
+piano2.exe
+🎶 Press A, S, D, F, G, H to play notes.
+Press ESC to quit.
+
+🛠 Tech Stack
+Language: x86 Assembly (TASM)
+
+Graphics Mode: Mode 13h (320x200, 256 colors)
+
+Sound: PC speaker via port 42h
+
+Tools: Turbo Assembler (TASM), Turbo Linker (TLINK)
+
+Emulation: DOSBox
+
+🎨 Features
+Draws 6 white piano keys on screen.
+
+Each key changes color when pressed:
 
 A → Do (Red)
 
@@ -23,48 +56,14 @@ G → Sol (Light Blue)
 
 H → La (Blue)
 
-Press ESC to exit and return to text mode.
+Plays the corresponding note frequency on the PC speaker.
 
-Uses PC speaker for sound, sending frequencies directly to port 42h.
+Pressing ESC exits and shows a goodbye message.
 
-Simple message handling (see you later) when closing the program.
+📸 Screenshots
 
-🖥️ How It Works
+<img width="752" height="540" alt="Screenshot 2025-09-07 at 20 41 49" src="https://github.com/user-attachments/assets/3379c918-7020-44f5-8ba2-02d36bed0145" />
 
-Graphics: Keys are drawn using custom macros and procedures (drawPixel, drawLine, print).
+<img width="752" height="540" alt="Screenshot 2025-09-07 at 20 41 31" src="https://github.com/user-attachments/assets/10318d86-f40b-4153-b5ad-996fa338f34d" />
 
-Sound: Notes are played with playnote, controlling the PC speaker via I/O ports.
-
-Keyboard Input: Polls the keyboard buffer (in al, 60h) to detect key presses/releases.
-
-Macros simplify repetitive tasks like enabling sound, drawing keys, and switching modes.
-
-▶️ Running the Program
-
-Install DOSBox
-.
-
-Assemble and link the code with TASM or MASM:
-
-tasm piano2.asm
-tlink piano2.obj
-
-
-Run the executable inside DOSBox:
-
-piano2.exe
-
-
-Press the keys A, S, D, F, G, H to play notes.
-Press ESC to exit.
-
-📸 Demo
-
-(You can add a screenshot of the piano keys here once you run it in DOSBox!)
-
-📂 File Structure
-
-PIANO2.ASM → Source code for the piano program.
-
-(Optional: compiled .EXE if you want to include it in the repo).
 
