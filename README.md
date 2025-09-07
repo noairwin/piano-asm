@@ -24,7 +24,7 @@ It runs inside **DOSBox** using **graphics mode 13h** and the **PC speaker** to 
 🎶 Press A, S, D, F, G, H to play notes.
 Press ESC to quit.
 
-##🛠 Tech Stack
+## 🛠 Tech Stack
 Language: x86 Assembly (TASM)
 
 Graphics Mode: Mode 13h (320x200, 256 colors)
